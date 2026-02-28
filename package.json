@@ -1,0 +1,27 @@
+{
+  "name": "api-express-mytaxitravel",
+  "version": "0.0.1",
+  "description": "Api rest in Express",
+  "homepage": "https://github.com/S109shiro/My-Taxi-Travel-API---Express-with-MongoDB#readme",
+  "bugs": {
+    "url": "https://github.com/S109shiro/My-Taxi-Travel-API---Express-with-MongoDB/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S109shiro/My-Taxi-Travel-API---Express-with-MongoDB.git"
+  },
+  "license": "ISC",
+  "author": "Sebastian Gonzalez Rodriguez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.3",
+    "nodemon": "^3.1.14"
+  }
+}
