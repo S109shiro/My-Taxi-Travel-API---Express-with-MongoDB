@@ -2,6 +2,22 @@ const express = require("express");
 const router = express.Router();
 const userSchema = require("../models/user");
 
+
+
+router.get("/getAll", async(req, res)=>{
+    try{
+        const allUsers = await userSchema.find({});
+        if(allUsers.length <= 0){
+            res.status(400).send("No existen registros en esta base de datos.")
+        }else{
+            res.status(200).json(allUsers);
+        }
+    } catch(err){
+        res.status(500).json({Error : err.message});
+    } 
+})
+
+
 router.get("/get/:id", async(req, res)=>{
     const userId = req.params.id;
     try{
@@ -21,7 +37,7 @@ router.post("/create", async(req, res)=>{
     const newUser = userSchema(req.body);
     await newUser.save()
     .then(()=>{res.status(200).json("El usuario '" + newUser.nombre + "' ha sido creado satisfactoriamente.")})
-    .catch((err)=>{res.status(500).json({message : err})})
+    .catch((err)=>{res.status(500).json({Error : err.message})})   
 })
 
 
@@ -48,15 +64,15 @@ router.delete("/delete/:id", async(req, res)=>{
             return res.status(400).send("Este usuario no existe o ingresaste mal su ID");
         }
         else{
-            await userSchema.deleteOne({_id : deleteUserID}).then(()=>{res.status(200).send("Ok")}).catch((err)=>{res.status(500).json({Error: err})});
+            await userSchema.deleteOne({_id : deleteUserID})
+            .then(()=>{res.status(200).send("El usuario ha sido eliminado.")})
+            .catch((err)=>{res.status(400).json({Error: err})});
             
         }
-
     }catch(err){
-
+        res.status(500).json({Error: err.message})
     }
 })
-
 
 
 // Se exportan los endpoints para utilizarlos en el index.js

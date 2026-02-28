@@ -8,7 +8,7 @@ const express = require("express");
 require("./dbConnection");
 
 // Obtencion de los endpoints creados en otro archivo
-const users = require("./routes/routesUser")
+const usersRoutes = require("./routes/routesUser")
 
 // Preparacion del servidor local
 const app = express();
@@ -25,4 +25,4 @@ app.listen(port, ()=>{
 })
 
 // Endpoints para los users
-app.use("/users", users)
+app.use("/users", usersRoutes)
