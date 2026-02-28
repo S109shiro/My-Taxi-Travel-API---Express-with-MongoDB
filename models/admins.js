@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-// Schema para el user
-const userSchema = mongoose.Schema({
+const adminSchema = mongoose.Schema({
     nombre: {
         type: String,
         require: true
@@ -42,15 +41,10 @@ const userSchema = mongoose.Schema({
         type: Date,
         require: true
     },
-    calificacion_media: {
-        type: Number,
-        require: true
-    },
     contrasena: {
         type: String,
         require: true
     } 
 })
 
-// Se exporta el Schema a la base de datos con dos atributos (nombre de la coleccion a guardar, estructura del objeto)
-module.exports = mongoose.model('users', userSchema);
+module.exports = mongoose.model("administrators", adminSchema);

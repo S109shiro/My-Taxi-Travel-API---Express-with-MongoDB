@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-// Schema para el user
-const userSchema = mongoose.Schema({
+const driversSchema = mongoose.Schema({
     nombre: {
         type: String,
         require: true
@@ -41,8 +40,20 @@ const userSchema = mongoose.Schema({
     fecha_nacimiento: {
         type: Date,
         require: true
-    },
+    },    
     calificacion_media: {
+        type: Number,
+        require: true
+    },
+    ganancias_mes: {
+        type: Number,
+        require: false
+    },
+    ganancias_totales: {
+        type: Number,
+        require: true
+    },
+    taxi_en_uso: {
         type: Number,
         require: true
     },
@@ -52,5 +63,4 @@ const userSchema = mongoose.Schema({
     } 
 })
 
-// Se exporta el Schema a la base de datos con dos atributos (nombre de la coleccion a guardar, estructura del objeto)
-module.exports = mongoose.model('users', userSchema);
+module.exports = mongoose.model("drivers", driversSchema);

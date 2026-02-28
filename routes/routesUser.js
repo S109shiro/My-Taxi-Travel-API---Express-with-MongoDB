@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const userSchema = require("../models/user");
 
-
-
 router.get("/getAll", async(req, res)=>{
     try{
         const allUsers = await userSchema.find({});
@@ -13,7 +11,7 @@ router.get("/getAll", async(req, res)=>{
             res.status(200).json(allUsers);
         }
     } catch(err){
-        res.status(500).json({Error : err.message});
+        res.status(500).json({"Se ha presentado el siguiente error" : err.message});
     } 
 })
 
@@ -27,7 +25,7 @@ router.get("/get/:id", async(req, res)=>{
         }
         res.send(userGet);
     }catch(err){
-        res.status(500).json({Error: err.message})
+        res.status(500).json({"Se ha presentado el siguiente error": err.message})
     }
     
 })
@@ -35,9 +33,14 @@ router.get("/get/:id", async(req, res)=>{
 
 router.post("/create", async(req, res)=>{
     const newUser = userSchema(req.body);
-    await newUser.save()
-    .then(()=>{res.status(200).json("El usuario '" + newUser.nombre + "' ha sido creado satisfactoriamente.")})
-    .catch((err)=>{res.status(500).json({Error : err.message})})   
+    // Para que no envie datos vacios
+    if(!req.body){
+        res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
+    }else{
+        await newUser.save()
+        .then(()=>{res.status(200).json("El usuario '" + newUser.nombre + "' ha sido creado satisfactoriamente.")})
+        .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error" : err.message})}) 
+    }
 })
 
 
@@ -51,7 +54,7 @@ router.put("/update/:id", async(req, res)=>{
     else{
         await userSchema.findByIdAndUpdate(updateUserID, updateUser)
         .then(()=>{res.status(200).json("El usuario '" + updateUser.nombre + "' ha sido actualizado.")})
-        .catch((err)=>{res.status(500).json({Error: err.message})})
+        .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})})
     }
 })
 
@@ -66,11 +69,11 @@ router.delete("/delete/:id", async(req, res)=>{
         else{
             await userSchema.deleteOne({_id : deleteUserID})
             .then(()=>{res.status(200).send("El usuario ha sido eliminado.")})
-            .catch((err)=>{res.status(400).json({Error: err})});
+            .catch((err)=>{res.status(400).json({"Se ha presentado el siguiente error": err})});
             
         }
     }catch(err){
-        res.status(500).json({Error: err.message})
+        res.status(500).json({"Se ha presentado el siguiente error": err.message})
     }
 })
 
