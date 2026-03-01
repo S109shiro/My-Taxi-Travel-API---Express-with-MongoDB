@@ -6,7 +6,7 @@ router.get("/getAll", async(req, res)=>{
     try{
         const allDrivers = await driverSchema.find({});
         if(allDrivers.length <= 0){
-            res.status(400).send("No existen registros en esta base de datos.")
+            res.status(200).send("No existen registros en esta base de datos.")
         }else{
             res.status(200).json(allDrivers);
         }

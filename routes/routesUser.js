@@ -6,7 +6,7 @@ router.get("/getAll", async(req, res)=>{
     try{
         const allUsers = await userSchema.find({});
         if(allUsers.length <= 0){
-            res.status(400).send("No existen registros en esta base de datos.")
+            res.status(200).send("No existen registros en esta base de datos.")
         }else{
             res.status(200).json(allUsers);
         }
@@ -19,11 +19,11 @@ router.get("/getAll", async(req, res)=>{
 router.get("/get/:id", async(req, res)=>{
     const userId = req.params.id;
     try{
-        const userGet = await userSchema.findById(userId)
+        const userGet = await userSchema.findById(userId);
         if(!userGet){
             return res.status(404).send("El ID ingresado no le pertenece a ningun usuario registrado en la base de datos.")
         }
-        res.send(userGet);
+        res.status(200).send(userGet);
     }catch(err){
         res.status(500).json({"Se ha presentado el siguiente error": err.message})
     }
