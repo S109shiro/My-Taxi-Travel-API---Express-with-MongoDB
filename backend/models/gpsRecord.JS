@@ -27,4 +27,4 @@ const gpsRecordSchema = mongoose.Schema({
     }
 })
 
-module.exports = gpsRecord("gpsRecords", gpsRecordSchema);
+module.exports = mongoose.model("gpsRecords", gpsRecordSchema);
