@@ -19,4 +19,4 @@ const qualificationSchema = mongoose.Schema({
     }
 })
 
-models.exports = qualificationSchema("quialifications", qualificationSchema);
+models.exports = mongoose.model("quialifications", qualificationSchema);

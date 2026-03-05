@@ -1,19 +1,27 @@
 const mongoose = require("mongoose");
 
 const gpsRecordSchema = mongoose.Schema({
-    lugar_inicio: {
+    direccion_inicio: {
         type: String,
         require: true
     },
-    lugar_destino: {
+    direccion_destino: {
         type: String,
         require: true
     },
-    coordenada_inicio: {
+    latitud_inicio: {
         type: Number,
         require: true
     }, 
-    coordenada_fin: {
+    longitud_inicio: {
+        type: Number,
+        require: true
+    },
+    latitud_destino: {
+        type: Number,
+        require: true
+    },
+    longitud_destino: {
         type: Number,
         require: true
     },
