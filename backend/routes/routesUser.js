@@ -64,13 +64,12 @@ router.delete("/delete/:id", async(req, res)=>{
     try{
         const userExist = await userSchema.findById(deleteUserID);
         if(!userExist){
-            return res.status(400).send("Este usuario no existe o ingresaste mal su ID");
+            return res.status(404).send("Este usuario no existe o ingresaste mal su ID");
         }
         else{
             await userSchema.deleteOne({_id : deleteUserID})
             .then(()=>{res.status(200).send("El usuario ha sido eliminado.")})
-            .catch((err)=>{res.status(400).json({"Se ha presentado el siguiente error": err})});
-            
+            .catch((err)=>{res.status(400).json({"Se ha presentado el siguiente error": err})});       
         }
     }catch(err){
         res.status(500).json({"Se ha presentado el siguiente error": err.message})

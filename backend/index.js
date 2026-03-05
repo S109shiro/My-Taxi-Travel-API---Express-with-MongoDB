@@ -8,9 +8,10 @@ const express = require("express");
 require("./dbConnection");
 
 // Obtencion de los endpoints creados en otro archivo
-const usersRoutes = require("./routes/routesUser")
-const adminsRoutes = require("./routes/routesAdmin")
-const driversRoutes = require("./routes/routesDriver")
+const usersRoutes = require("./routes/routesUser");
+const adminsRoutes = require("./routes/routesAdmin");
+const driversRoutes = require("./routes/routesDriver");
+const taxisRoutes = require("./routes/routesTaxi");
 
 // Preparacion del servidor local
 const app = express();
@@ -20,10 +21,10 @@ const port = 3000;
 app.use(express.json());
 
 // Endpoints para los roles
-app.use("/users", usersRoutes)
-app.use("/admins", adminsRoutes)
-app.use("/drivers", driversRoutes)
-
+app.use("/users", usersRoutes);
+app.use("/admins", adminsRoutes);
+app.use("/drivers", driversRoutes);
+app.use("/taxis", taxisRoutes);
 
 // Levantamiento del servidor
 app.listen(port, ()=>{

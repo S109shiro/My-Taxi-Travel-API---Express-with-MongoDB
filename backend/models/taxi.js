@@ -9,11 +9,11 @@ const taxiSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    fecha_ultima_tecnico_mecanica: {
+    ultima_tecnico_mecanica: {
         type: Date,
         require: true
     }
 })
 
 
-module.exports = taxiSchema("taxis", taxiSchema);
+module.exports = mongoose.model("taxis", taxiSchema);
