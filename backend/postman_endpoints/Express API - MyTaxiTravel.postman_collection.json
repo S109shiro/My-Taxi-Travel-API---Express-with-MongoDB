@@ -1,0 +1,411 @@
+{
+  "info": {
+    "_postman_id": "b28b0557-efb5-4b7e-bfdc-2f92080f5bd0",
+    "name": "Express API - MyTaxiTravel",
+    "description": "Coleccion de pruebas para Api en Express",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50925365",
+    "_collection_link": "https://go.postman.co/collection/50925365-b28b0557-efb5-4b7e-bfdc-2f92080f5bd0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Express - Conductor - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un conductor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Sandra\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rojas\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los conductores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/drivers/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener conductor por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/get/69a3adb4a2ce7116ea3a4247",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "get",
+                "69a3adb4a2ce7116ea3a4247"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un conductor",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Rosalba\",\r\n    \"primer_apellido\": \"Lopez\",\r\n    \"segundo_apellido\": \"Torres\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/update/69a3adb4a2ce7116ea3a4247",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "update",
+                "69a3adb4a2ce7116ea3a4247"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar conductor con ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/drivers/delete/69a3b144a2ce7116ea3a4258",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "delete",
+                "69a3b144a2ce7116ea3a4258"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Usuario - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Sebastian\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rodriguez\",\r\n    \"edad\": 21,\r\n    \"numero_identificacion\": 1016712994,\r\n    \"email\": \"sebasgonra@hotmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3003367605\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 4.5,\r\n    \"contrasena\": \"000041\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/users/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener usuario por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/get/69a3adb5a2ce7116ea3a424f",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "get",
+                "69a3adb5a2ce7116ea3a424f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un usuario",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Juana\",\r\n    \"primer_apellido\": \"Miyamoto\",\r\n    \"segundo_apellido\": \"Lopez\",\r\n    \"edad\": 32,\r\n    \"numero_identificacion\": 134456,\r\n    \"email\": \"miyamoto@hotmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"1990-10-01\",\r\n    \"calificacion_media\": 3.5,\r\n    \"contrasena\": \"Juana20003\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/update/69a3adb5a2ce7116ea3a424f",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "update",
+                "69a3adb5a2ce7116ea3a424f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar usuario con ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/users/delete/69a3b18ca2ce7116ea3a4266",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "delete",
+                "69a3b18ca2ce7116ea3a4266"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Administrador - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un administrador",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Alejandro\",\r\n    \"primer_apellido\": \"Mendoza\",\r\n    \"segundo_apellido\": \"Ariza\",\r\n    \"edad\": 26,\r\n    \"numero_identificacion\": 1011206817,\r\n    \"email\": \"alejo@gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"2000-10-24\",\r\n    \"contrasena\": \"4208\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/admins/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "admins",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los administradores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/admins/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "admins",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener administrador por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/admins/get/69a3adb6a2ce7116ea3a4252",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "admins",
+                "get",
+                "69a3adb6a2ce7116ea3a4252"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un administrador",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Oscar\",\r\n    \"primer_apellido\": \"Humberto\",\r\n    \"segundo_apellido\": \"Vargas\",\r\n    \"edad\": 36,\r\n    \"numero_identificacion\": 1011206817,\r\n    \"email\": \"alejo@gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"1990-02-14\",\r\n    \"contrasena\": \"124208\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/admins/update/69a3adb6a2ce7116ea3a4252",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "admins",
+                "update",
+                "69a3adb6a2ce7116ea3a4252"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar conductor con ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/admins/delete/69a3b1cda2ce7116ea3a4273",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "admins",
+                "delete",
+                "69a3b1cda2ce7116ea3a4273"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
