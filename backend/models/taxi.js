@@ -9,7 +9,7 @@ const taxiSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    fecha_ultimo_tecnico_mecanica: {
+    fecha_ultima_tecnico_mecanica: {
         type: Date,
         require: true
     }
