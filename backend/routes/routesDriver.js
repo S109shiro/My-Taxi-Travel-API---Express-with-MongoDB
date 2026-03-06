@@ -23,7 +23,7 @@ router.get("/get/:id", async(req, res)=>{
         if(!driverGet){
             return res.status(404).send("El ID ingresado no le pertenece a ningun conductor registrado en la base de datos.")
         }
-        res.send(driverGet);
+        res.status(200).send(driverGet);
     }catch(err){
         res.status(500).json({"Se ha presentado el siguiente error": err.message})
     }
@@ -50,6 +50,8 @@ router.put("/update/:id", async(req, res)=>{
     const idExist = await driverSchema.findById(updateDriverID);
     if(!idExist){
         res.status(400).send("El conductor a editar no existe o el ID esta mal digitado.");
+    }else if(!req.body){
+        res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
     }
     else{
         await driverSchema.findByIdAndUpdate(updateDriverID, updateDriver)

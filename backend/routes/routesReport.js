@@ -1,5 +1,3 @@
-// Faltan pruebas
-
 const express = require("express");
 const router = express.Router();
 const reportSchema = require("../models/report")
@@ -67,7 +65,7 @@ router.delete("/delete/:id", async(req, res)=>{
     try{
         const idExist = await reportSchema.findById(deleteReportID);
         if(!idExist){
-            res.status(404).send("El reporte no existe o ingresaste mal su ID");
+            res.status(404).send("El reporte a eliminar no existe o ingresaste mal su ID");
         }else{
             await reportSchema.deleteOne({_id: deleteReportID})
             .then(res.status(200).send("El reporte ha sido eliminado exitosamente."))

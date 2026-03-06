@@ -50,6 +50,8 @@ router.put("/update/:id", async(req, res)=>{
     const idExist = await adminSchema.findById(updateAdminID);
     if(!idExist){
         res.status(400).send("El administrador a editar no existe o el ID esta mal digitado.");
+    }else if(!req.body){
+        res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
     }
     else{
         await adminSchema.findByIdAndUpdate(updateAdminID, updateAdmin)

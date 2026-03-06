@@ -48,7 +48,10 @@ router.put("/update/:id", async (req, res)=>{
         const idExist = await taxiSchema.findById(updateTaxiID);
         if(!idExist){
             res.status(404).send("El taxi a editar no existe o el ID esta mal digitado.");
-        }else{
+        }else if(!req.body){
+            res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
+        }
+        else{
             await taxiSchema.findByIdAndUpdate(updateTaxiID, updateTaxi)
             .then(res.status(200).send("El taxi ha sido actualizado correctamente."))
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
