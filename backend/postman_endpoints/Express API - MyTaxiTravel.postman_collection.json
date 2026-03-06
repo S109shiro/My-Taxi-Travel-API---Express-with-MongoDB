@@ -2,145 +2,12 @@
   "info": {
     "_postman_id": "b28b0557-efb5-4b7e-bfdc-2f92080f5bd0",
     "name": "Express API - MyTaxiTravel",
-    "description": "Coleccion de pruebas para Api en Express",
+    "description": "adad",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "50925365",
     "_collection_link": "https://go.postman.co/collection/50925365-b28b0557-efb5-4b7e-bfdc-2f92080f5bd0?source=collection_link"
   },
   "item": [
-    {
-      "name": "Express - Conductor - My Taxi Travel",
-      "item": [
-        {
-          "name": "Crear un conductor",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"nombre\": \"Sandra\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rojas\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:3000/drivers/create",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "drivers",
-                "create"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Obtener todos los conductores",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:3000/drivers/getAll",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "drivers",
-                "getAll"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Obtener conductor por ID",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:3000/drivers/get/69a3adb4a2ce7116ea3a4247",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "drivers",
-                "get",
-                "69a3adb4a2ce7116ea3a4247"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Actualizar un conductor",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"nombre\": \"Rosalba\",\r\n    \"primer_apellido\": \"Lopez\",\r\n    \"segundo_apellido\": \"Torres\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:3000/drivers/update/69a3adb4a2ce7116ea3a4247",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "drivers",
-                "update",
-                "69a3adb4a2ce7116ea3a4247"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Eliminar conductor con ID",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "localhost:3000/drivers/delete/69a3b144a2ce7116ea3a4258",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "drivers",
-                "delete",
-                "69a3b144a2ce7116ea3a4258"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
     {
       "name": "Express - Usuario - My Taxi Travel",
       "item": [
@@ -209,7 +76,7 @@
               }
             },
             "url": {
-              "raw": "localhost:3000/users/get/69a3adb5a2ce7116ea3a424f",
+              "raw": "localhost:3000/users/get/69a4ae48b751d3a7c022182b",
               "host": [
                 "localhost"
               ],
@@ -217,7 +84,7 @@
               "path": [
                 "users",
                 "get",
-                "69a3adb5a2ce7116ea3a424f"
+                "69a4ae48b751d3a7c022182b"
               ]
             }
           },
@@ -238,7 +105,7 @@
               }
             },
             "url": {
-              "raw": "localhost:3000/users/update/69a3adb5a2ce7116ea3a424f",
+              "raw": "localhost:3000/users/update/69a4ae48b751d3a7c022182c",
               "host": [
                 "localhost"
               ],
@@ -246,7 +113,7 @@
               "path": [
                 "users",
                 "update",
-                "69a3adb5a2ce7116ea3a424f"
+                "69a4ae48b751d3a7c022182c"
               ]
             }
           },
@@ -258,7 +125,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "localhost:3000/users/delete/69a3b18ca2ce7116ea3a4266",
+              "raw": "localhost:3000/users/delete/69a4ae48b751d3a7c022182a",
               "host": [
                 "localhost"
               ],
@@ -266,7 +133,7 @@
               "path": [
                 "users",
                 "delete",
-                "69a3b18ca2ce7116ea3a4266"
+                "69a4ae48b751d3a7c022182a"
               ]
             }
           },
@@ -284,7 +151,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"nombre\": \"Alejandro\",\r\n    \"primer_apellido\": \"Mendoza\",\r\n    \"segundo_apellido\": \"Ariza\",\r\n    \"edad\": 26,\r\n    \"numero_identificacion\": 1011206817,\r\n    \"email\": \"alejo@gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"2000-10-24\",\r\n    \"contrasena\": \"4208\"\r\n}",
+              "raw": "{\r\n    \"nombre\": \"Osvaldo\",\r\n    \"primer_apellido\": \"Mendoza\",\r\n    \"segundo_apellido\": \"Ariza\",\r\n    \"edad\": 26,\r\n    \"numero_identificacion\": 1011206817,\r\n    \"email\": \"alejo@gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"2000-10-24\",\r\n    \"contrasena\": \"4208\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -342,7 +209,7 @@
               }
             },
             "url": {
-              "raw": "localhost:3000/admins/get/69a3adb6a2ce7116ea3a4252",
+              "raw": "localhost:3000/admins/get/69a4af18b751d3a7c0221838",
               "host": [
                 "localhost"
               ],
@@ -350,7 +217,7 @@
               "path": [
                 "admins",
                 "get",
-                "69a3adb6a2ce7116ea3a4252"
+                "69a4af18b751d3a7c0221838"
               ]
             }
           },
@@ -371,7 +238,7 @@
               }
             },
             "url": {
-              "raw": "localhost:3000/admins/update/69a3adb6a2ce7116ea3a4252",
+              "raw": "localhost:3000/admins/update/69a4af18b751d3a7c0221838",
               "host": [
                 "localhost"
               ],
@@ -379,7 +246,7 @@
               "path": [
                 "admins",
                 "update",
-                "69a3adb6a2ce7116ea3a4252"
+                "69a4af18b751d3a7c0221838"
               ]
             }
           },
@@ -391,7 +258,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "localhost:3000/admins/delete/69a3b1cda2ce7116ea3a4273",
+              "raw": "localhost:3000/admins/delete/69a4af18b751d3a7c0221831",
               "host": [
                 "localhost"
               ],
@@ -399,7 +266,636 @@
               "path": [
                 "admins",
                 "delete",
-                "69a3b1cda2ce7116ea3a4273"
+                "69a4af18b751d3a7c0221831"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Conductor - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un conductor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Sandra\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rojas\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los conductores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/drivers/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener conductor por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/get/69a4af92b751d3a7c0221845",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "get",
+                "69a4af92b751d3a7c0221845"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un conductor",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Rosalba\",\r\n    \"primer_apellido\": \"Lopez\",\r\n    \"segundo_apellido\": \"Torres\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": 1,\r\n    \"contrasena\": \"0000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/drivers/update/69a4af92b751d3a7c0221845",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "update",
+                "69a4af92b751d3a7c0221845"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar conductor con ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/drivers/delete/69a4af92b751d3a7c0221845",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "drivers",
+                "delete",
+                "69a4af92b751d3a7c0221845"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Taxi - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un taxi",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"placa\" : \"AAA000\",\r\n    \"modelo\" : \"Chevrolet\",\r\n    \"ultima_tecnico_mecanica\" : \"2026-10-24\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/taxis/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "taxis",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los taxis",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/taxis/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "taxis",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener taxi por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/taxis/get/69a990655da711ac6418e926",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "taxis",
+                "get",
+                "69a990655da711ac6418e926"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un taxi con el ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"placa\" : \"CCC111\",\r\n    \"modelo\" : \"Honda\",\r\n    \"ultima_tecnico_mecanica\" : \"2014-10-24\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/taxis/update/69a990655da711ac6418e926",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "taxis",
+                "update",
+                "69a990655da711ac6418e926"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Borrar un taxi con ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/taxis/delete/69a989c92cb5f3bc940ce8c3",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "taxis",
+                "delete",
+                "69a989c92cb5f3bc940ce8c3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Reporte - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear un reporte",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fecha_reporte\" : \"2024-01-29\",\r\n    \"tipo_reporte\" : \"Mal servicio\",\r\n    \"detalles\" : \"Se me ofrecio un mal servicio por parte del conductor\",\r\n    \"encargado_reporte\" : 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/reports/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "reports",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los reportes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/reports/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "reports",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener reporte por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/reports/get/69aa08f9ab06302b60952a44",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "reports",
+                "get",
+                "69aa08f9ab06302b60952a44"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar reporte por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fecha_reporte\" : \"2012-01-29\",\r\n    \"tipo_reporte\" : \"Cobro excesivo\",\r\n    \"detalles\" : \"Se presento un cobro excesivo a la hora de realizar el servicio\",\r\n    \"encargado_reporte\" : 23\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/reports/update/69aa0adccb6a0df1b5f490ec",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "reports",
+                "update",
+                "69aa0adccb6a0df1b5f490ec"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar reporte por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/reports/delete/69aa08f9ab06302b60952a44",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "reports",
+                "delete",
+                "69aa08f9ab06302b60952a44"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Registro GPS - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear registro GPS",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"direccion_inicio\": \"Cra. 69a #1-69\",\r\n    \"direccion_destino\": \"Ak 15 #78-33\",\r\n    \"latitud_inicio\": 4.622734,\r\n    \"longitud_inicio\": -74.129357,\r\n    \"latitud_destino\": 4.664311,\r\n    \"longitud_destino\": -74.058418,\r\n    \"fecha_hora_inicio\": \"2025-02-04T14:30:00\",\r\n    \"fecha_hora_final\": \"2025-02-04T15:00:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/gpsRecords/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "gpsRecords",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los regisitros GPS",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/gpsRecords/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "gpsRecords",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener registro GPS por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/gpsRecords/get/69aa108cf9256fede3fe15f5",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "gpsRecords",
+                "get",
+                "69aa108cf9256fede3fe15f5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar registro GPS por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"direccion_inicio\": \"Cra, 00 #1-8\",\r\n    \"direccion_destino\": \"Cra, 03 #1-8\",\r\n    \"latitud_inicio\": 1.255555,\r\n    \"longitud_inicio\": -74.594545,\r\n    \"latitud_destino\": 4.305089,\r\n    \"longitud_destino\": -74.852256,\r\n    \"fecha_hora_inicio\": \"2004-05-06T10:30:00\",\r\n    \"fecha_hora_final\": \"2004-05-06T13:00:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/gpsRecords/update/69aa108cf9256fede3fe15f5",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "gpsRecords",
+                "update",
+                "69aa108cf9256fede3fe15f5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar registro GPS por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/gpsRecords/delete/69aa108cf9256fede3fe15f5",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "gpsRecords",
+                "delete",
+                "69aa108cf9256fede3fe15f5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Express - Calificacion - My Taxi Travel",
+      "item": [
+        {
+          "name": "Crear calificacion",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"calificacion_usuario\" : 5.0,\r\n    \"calificacion_conductor\": 4.0,\r\n    \"comentario_usuario\": \"Buen Viaje\",\r\n    \"comentario_conductor\": \"Buena experiencia\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/qualifications/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "qualifications",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todas las calificaciones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/qualifications/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "qualifications",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener calificacion por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/qualifications/get/69aaded9a66504217b6bc963",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "qualifications",
+                "get",
+                "69aaded9a66504217b6bc963"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar calificacion por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"calificacion_usuario\" : 2.5,\r\n    \"calificacion_conductor\": 1.4,\r\n    \"comentario_usuario\": \"\",\r\n    \"comentario_conductor\": \"\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/qualifications/update/69aaded9a66504217b6bc963",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "qualifications",
+                "update",
+                "69aaded9a66504217b6bc963"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar calificacion por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/qualifications/delete/69aaded9a66504217b6bc963",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "qualifications",
+                "delete",
+                "69aaded9a66504217b6bc963"
               ]
             }
           },
