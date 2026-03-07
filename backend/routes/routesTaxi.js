@@ -35,7 +35,7 @@ router.post("/create", async (req, res)=>{
         res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo.");
     }else{
         await newTaxi.save()
-        .then(res.status(200).send("El taxi ha sido creado satisfactoriamente."))
+        .then(()=>{res.status(200).send("El taxi ha sido creado satisfactoriamente.")})
         .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})})
     }
 })
@@ -53,7 +53,7 @@ router.put("/update/:id", async (req, res)=>{
         }
         else{
             await taxiSchema.findByIdAndUpdate(updateTaxiID, updateTaxi)
-            .then(res.status(200).send("El taxi ha sido actualizado correctamente."))
+            .then(()=>{res.status(200).send("El taxi ha sido actualizado correctamente.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
 
@@ -71,7 +71,7 @@ router.delete("/delete/:id", async(req, res)=>{
         }
         else{
             await taxiSchema.deleteOne({_id: deleteTaxiID})
-            .then(res.status(200).send("El taxi ha sido eliminado."))
+            .then(()=>{res.status(200).send("El taxi ha sido eliminado.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})})
         }
     }catch(err){

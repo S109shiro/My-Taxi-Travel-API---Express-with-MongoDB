@@ -35,7 +35,7 @@ router.post("/create", async(req, res)=>{
             res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
         }else{
             await newGpsRecord.save()
-            .then(res.status(200).send("El registro GPS ha sido creado satisfactoriamente."))
+            .then(()=>{res.status(200).send("El registro GPS ha sido creado satisfactoriamente.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
     }catch(err) {
@@ -55,7 +55,7 @@ router.put("/update/:id", async(req, res)=>{
         }
         else{
             await gpsRecordSchema.findByIdAndUpdate(gpsRecordID, updateGpsRecord)
-            .then(res.status(200).send("El registro GPS ha sido actualizado."))
+            .then(()=>{res.status(200).send("El registro GPS ha sido actualizado.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
     }catch(err){
@@ -72,7 +72,7 @@ router.delete("/delete/:id", async(req,res)=>{
         }
         else{
             await gpsRecordSchema.deleteOne({_id: deleteGpsRecordID})
-            .then(res.status(200).send("El registro GPS ha sido eliminado."))
+            .then(()=>{res.status(200).send("El registro GPS ha sido eliminado.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
     }catch(err){

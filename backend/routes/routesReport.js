@@ -35,7 +35,7 @@ router.post("/create", async(req, res)=>{
         res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo");
     }else{
         await newReport.save()
-        .then(res.status(200).send("El registro ha sido creado satisfactoriamente."))
+        .then(()=>{res.status(200).send("El registro ha sido creado satisfactoriamente.")})
         .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
     }
 })
@@ -52,7 +52,7 @@ router.put("/update/:id", async(req, res)=>{
         }
         else{
             await reportSchema.findByIdAndUpdate(updateReportID, updateReport)
-            .then(res.status(200).send("El reporte ha sido actualizado."))
+            .then(()=>{res.status(200).send("El reporte ha sido actualizado.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
     }catch(err){
@@ -68,7 +68,7 @@ router.delete("/delete/:id", async(req, res)=>{
             res.status(404).send("El reporte a eliminar no existe o ingresaste mal su ID");
         }else{
             await reportSchema.deleteOne({_id: deleteReportID})
-            .then(res.status(200).send("El reporte ha sido eliminado exitosamente."))
+            .then(()=>{res.status(200).send("El reporte ha sido eliminado exitosamente.")})
             .catch((err)=>{res.status(500).json({"Se ha presentado el siguiente error": err.message})});
         }
     }catch(err){

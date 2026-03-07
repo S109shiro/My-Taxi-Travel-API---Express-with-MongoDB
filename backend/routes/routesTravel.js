@@ -49,7 +49,7 @@ router.put("/update/:id", async(req, res)=>{
     try{
         const existId = await travelSchema.findById(updateTravelID);
         if(!existId){
-            res.status(404).send("El viaje a editar no existe o el ID esta mal digitado.");
+            res.status(400).send("El viaje a editar no existe o el ID esta mal digitado.");
         }else if(!req.body){
             res.status(400).send("No se puede enviar la request vacia. Vuelve a intentarlo.")
         }else{
