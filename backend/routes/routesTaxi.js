@@ -23,7 +23,7 @@ router.get("/get/:id", async (req, res)=>{
         if(!taxi){
             return res.status(404).send("El ID ingresado no le pertenece a ningun taxi registrado en la base de datos.");
         }
-        res.send(taxi);
+        res.status(200).json(taxi);
     } catch(err){
         res.status(500).json({"Se ha presentado el siguiente error": err.message});
     }
