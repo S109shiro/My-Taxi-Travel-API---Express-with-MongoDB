@@ -15,6 +15,7 @@ const taxisRoutes = require("./routes/routesTaxi");
 const reportsRoutes = require("./routes/routesReport");
 const gpsRecordsRoutes = require("./routes/routesGpsRecord");
 const qualificationRoutes = require("./routes/routesQualification");
+const travelRoutes = require("./routes/routesTravel");
 
 // Preparacion del servidor local
 const app = express();
@@ -31,6 +32,7 @@ app.use("/taxis", taxisRoutes);
 app.use("/reports", reportsRoutes);
 app.use("/gpsRecords", gpsRecordsRoutes);
 app.use("/qualifications", qualificationRoutes);
+app.use("/travels", travelRoutes);
 
 // Levantamiento del servidor
 app.listen(port, ()=>{
