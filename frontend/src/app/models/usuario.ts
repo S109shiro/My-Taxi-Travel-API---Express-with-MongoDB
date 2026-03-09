@@ -5,11 +5,11 @@ export class Usuario {
     segundo_apellido: string = "";
     edad: number = 0;
     numero_identificacion: number = 0;
-    email: string = "@gmail.com";
+    email: string = "";
     sexo: string = "";
     documento_identidad: string = "";
     numero_telefono: string = "";
-    fecha_nacimiento: string = "1900-01-01";
+    fecha_nacimiento: string = "";
     calificacion_media: number = 0;
     contrasena: string = "";
 }

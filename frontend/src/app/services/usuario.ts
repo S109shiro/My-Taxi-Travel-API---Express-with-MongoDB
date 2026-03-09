@@ -14,12 +14,12 @@ export class UsuarioService {
 
   // Obtener todos los usuarios
   getUsuarios(): Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(this.urlApi+"/getAll");  // Corregir endpoints
+    return this.http.get<Usuario[]>(this.urlApi+"/getAll");  
   }
 
   // Obtener un usuario
   getUsuario(id: string): Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.urlApi+"get"}/${id}`);
+    return this.http.get<Usuario>(`${this.urlApi}/get/${id}`);
   }
 
   // Crear un usuario
@@ -29,12 +29,12 @@ export class UsuarioService {
 
   // Actualizar un usuario
   putUsuario(id: string, updateUsuario: Usuario): Observable<String>{
-    return this.http.put<String>(`${this.urlApi+"update"}/${id}`, updateUsuario);
+    return this.http.put<String>(`${this.urlApi}/update/${id}`, updateUsuario);
   }
 
   // Eliminar un usuario
   deleteUsuario(id:string): Observable<String>{
-    return this.http.delete<String>(`${this.urlApi+"delete"}/${id}`);
+    return this.http.delete<String>(`${this.urlApi}/delete/${id}`);
   }
 
 }

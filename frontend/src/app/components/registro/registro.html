@@ -1,1 +1,198 @@
-<p>registro works!</p>
+<form #formUsuario="ngForm" (ngSubmit)="crearUsuario()">
+  <section class="text-gray-600 body-font">
+    <div class="contenedor container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <h1 class="title-font font-medium text-3xl text-gray-900">Regístrate en My Taxi Travel</h1>
+        <p class="leading-relaxed mt-4">
+          Únete a nuestra comunidad y empieza a disfrutar de viajes seguros, rápidos y cómodos. El
+          registro es fácil y solo te tomará unos minutos. Completa el formulario con tus datos
+          básicos, confirma tu correo o número de teléfono ¡y listo! En pocos pasos estarás
+          disfrutando de todo lo que My Taxi Travel tiene para ti.
+        </p>
+      </div>
+      <div
+        class="formulario lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 rounded shadow-lg"
+      >
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Formulario de registro</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="relative mb-4">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="usuario.nombre"
+              #nombre="ngModel"
+              placeholder="Nombre"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="nombre.invalid && nombre.touched" class="text-red-500">El nombre es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="text"
+              id="first-last-name"
+              name="first-last-name"
+              [(ngModel)]="usuario.primer_apellido"
+              placeholder="Primer apellido"
+              #pApellido = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="pApellido.invalid && pApellido.touched" class="text-red-500">El primer apellido es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="text"
+              id="second-last-name"
+              name="second-last-name"
+              [(ngModel)]="usuario.segundo_apellido"
+              placeholder="Segundo apellido"
+              #sApellido = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="sApellido.invalid && sApellido.touched" class="text-red-500">El segundo apellido es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              max="100"
+              [(ngModel)]="usuario.edad"
+              placeholder="Edad"
+              #edad = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="edad.invalid && edad.touched" class="text-red-500">Edad invalida</p>
+            <p *ngIf="usuario.edad >= 18 && usuario.edad <= 100" class="text-green-500">Edad valida</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="number"
+              id="document-number"
+              name="document-number"
+              [(ngModel)]="usuario.numero_identificacion"
+              placeholder="Numero de documento"
+              #nDocumento = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="nDocumento.invalid && nDocumento.touched" class="text-red-500">El numero de documento es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Correo Electronico"
+              [(ngModel)]="usuario.email"
+              #email = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            />
+            <p *ngIf="email.invalid && email.touched" class="text-red-500">El correo es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <select
+              name="Sex"
+              id="sex"
+              [(ngModel)]="usuario.sexo"
+              #sexo = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
+            >
+              <option value="" disabled selected hidden>Selecciona tu sexo</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+            </select>
+            <p *ngIf="sexo.invalid && sexo.touched" class="text-red-500">Debe elegir una opcion</p>
+          </div>
+          <div class="relative mb-4">
+            <!--Verificar despues un servicio para pdf-->
+            <input
+              type="file"
+              name=""
+              id=""
+              placeholder=""
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              accept="application/pdf"
+            />
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="number"
+              id="number-t"
+              name="number-t"
+              min="0"
+              [(ngModel)]="usuario.numero_telefono"
+              #nTelefono="ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Numero de telefono"
+              required
+            />
+            <p *ngIf="nTelefono.invalid && nTelefono.touched" class="text-red-500">El numero de telefono es obligatorio</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="date"
+              id="birthday"
+              name="birthday"
+              [(ngModel)]="usuario.fecha_nacimiento"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Ingrese su fecha de nacimiento"
+              required
+            />
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="usuario.contrasena"
+              #contrasena="ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Ingrese una contraseña"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              required
+            />
+            <p *ngIf="contrasena.errors?.['pattern'] && contrasena.touched" class="text-red-500">La contraseña debe tener mínimo 8 caracteres, entre letras y números</p>
+            <p *ngIf="contrasena.valid" class="text-green-500">Contraseña valida</p>
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="password"
+              id="c-password"
+              name="c-password"
+              [(ngModel)]="confirmPassword"
+              #confirmar = "ngModel"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Confirme su contraseña"
+              required
+            />
+            <p *ngIf="usuario.contrasena != confirmPassword && confirmar.touched" class="text-red-500">Las contraseñas no coinciden</p>
+            <p *ngIf="usuario.contrasena === confirmPassword && confirmPassword" class="text-green-500">Las contraseñas coinciden</p>
+          </div>
+        </div>
+        <div class="elementos_separados">
+            <div class="relative mb-4">
+                <input type="checkbox" name="noticias" id="noticias" class="accent-[var(--colorTitulo)] cursor-pointer">
+                <label for="noticias">Deseo recibir noticias a mi correo electronico</label>
+            </div>
+            <div class="relative mb-4">
+                <input type="checkbox" name="terminos" id="terminos" class="accent-[var(--colorTitulo)] cursor-pointer" required>
+                <label for="terminos">Acepto los terminos y condiciones</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="text-white bg-[#2C2C2C] hover:bg-gray-300 hover:text-black border-0 py-2 px-8 focus:outline-none rounded text-lg cursor-pointer" [disabled]="formUsuario.invalid || usuario.contrasena !== confirmPassword || usuario.edad < 18 && usuario.edad>=100">Registrarme</button>
+        <p class="text-lg bg-red-500 rounded text-white text-center mt-2 uppercase hover:bg-red-700 p-1" *ngIf="formUsuario.invalid || usuario.contrasena !== confirmPassword || usuario.edad < 18 && usuario.edad>=100">Formulario Invalido - Ingresa correctamente todos los datos</p>
+            <p class="text-xs text-gray-500 mt-3"><a href="./login.html" class="hover:underline">Ya tengo una cuenta</a></p>
+            </div>
+      </div>
+    </section>
+</form>
